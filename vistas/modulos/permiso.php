@@ -107,7 +107,6 @@ $crearUsuario->ctrBorrar();
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="ModalCrearUsuario">Validar Permiso</h4>
-                <button type="button" class="close" data-dimiss="modal" aria-label="Close">x</button>
             </div>
             <form role="form" method="post" enctype="multipart/form-data">
                 <div class="modal-body">

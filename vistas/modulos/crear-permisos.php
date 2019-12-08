@@ -75,7 +75,7 @@
                                 <div class="form-group has-icon-left">
                                     <label for="VInspectoria">Inspectoria</label>
                                     <div class="position-relative">
-                                        <input type="text" name="nuevoInspectoria" id="VInspectoria" required class="form-select">
+                                        <input type="text" name="nuevoInspectoria" pattern="[A-Za-z\s]{1,30}" id="VInspectoria" required class="form-control">
                                     </div>
                                 </div>
                             </div>

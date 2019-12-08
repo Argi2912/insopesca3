@@ -117,7 +117,6 @@ MODAL AGREGAR USUARIO
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="ModalCrearUsuario">Crear Usuario</h4>
-                <button type="button" class="close" data-dimiss="modal" aria-label="Close">x</button>
             </div>
             <form role="form" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
@@ -126,7 +125,7 @@ MODAL AGREGAR USUARIO
                             <div class="form-group has-icon-left">
                                 <label for="nombre">Ingresar Nombre</label>
                                 <div class="position-relative">
-                                    <input type="text" name="nuevoNombre" id="nombre" class="form-control">
+                                    <input type="text" name="nuevoNombre" pattern="[A-Za-z]{1,25}" id="nombre" required class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="user"></i>
                                     </div>
@@ -137,7 +136,7 @@ MODAL AGREGAR USUARIO
                             <div class="form-group has-icon-left">
                                 <label for="Usuario">Ingresar Usuario</label>
                                 <div class="position-relative">
-                                    <input type="text" name="nuevoUsuario" id="Usuario" class="form-control">
+                                    <input type="text" name="nuevoUsuario" pattern="[A-Za-z0-9]{5,20}" id="Usuario" required class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>
@@ -148,7 +147,7 @@ MODAL AGREGAR USUARIO
                             <div class="form-group has-icon-left">
                                 <label for="Password">Ingresar Contraseña</label>
                                 <div class="position-relative">
-                                    <input type="password" name="nuevoPassword" id="Pasword" class="form-control">
+                                    <input type="password" name="nuevoPassword" id="Pasword" required class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="lock"></i>
                                     </div>
@@ -160,7 +159,6 @@ MODAL AGREGAR USUARIO
                                 <label for="Perfil">Seleccionar Perfil</label>
                                 <div class="position-relative">
                                     <select name="nuevoPerfil" id="Perfil" class="form-select">
-                                        <option >Elegir...</option>
                                         <option value="Administrador">Administrador</option>
                                         <option value="Analista">Analista</option>
                                     </select>
@@ -218,7 +216,6 @@ MODAL EDITAR USUARIO
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="btnEditarUsuario">Crear Usuario</h4>
-                <button type="button" class="close" data-dimiss="modal" aria-label="Close">x</button>
             </div>
             <form role="form" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
@@ -228,7 +225,7 @@ MODAL EDITAR USUARIO
                                 <label for="nombre">Ingresar Nombre</label>
                                 <div class="position-relative">
                                     <input type="hidden"  name="idUsuario" id="idUsuario" required>
-                                    <input type="text" name="editarNombre" id="editarNombre" class="form-control">
+                                    <input type="text" name="editarNombre" pattern="[A-Za-z]{1,25}" id="editarNombre" required class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="user"></i>
                                     </div>
@@ -239,7 +236,7 @@ MODAL EDITAR USUARIO
                             <div class="form-group has-icon-left">
                                 <label for="Usuario">Ingresar Usuario</label>
                                 <div class="position-relative">
-                                    <input type="text" name="editarUsuario" id="editarUsuario" class="form-control">
+                                    <input type="text" name="editarUsuario" pattern="[A-Za-z0-9]{5,20}" id="editarUsuario" required class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>
@@ -250,7 +247,7 @@ MODAL EDITAR USUARIO
                             <div class="form-group has-icon-left">
                                 <label for="Password">Ingresar Contraseña</label>
                                 <div class="position-relative">
-                                    <input type="password" name="editarPassword" id="editarPassword" class="form-control">
+                                    <input type="password" name="editarPassword" id="editarPassword" required class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="lock"></i>
                                     </div>

@@ -25,28 +25,32 @@
                         </h4>
                     </div>
                     <div class="card-body px-0 py-1">
-                        <?php
+                        <table class='persona-tabla table table-striped' id="table1">
+                            <thead>
+                                <tr>
+                                    <th>Permiso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
 
+                                $directorio = "permisos/";
+                                if (file_exists($directorio)) {
+                                    $archivos = scandir($directorio);
 
-                        $directorio = "permisos/";
-
-                        if (file_exists($directorio)) {
-                            $archivos = scandir($directorio);
-
-                            // Mostrar la lista de archivos con enlaces de descarga
-                            echo "<div class='container'>";
-                            echo "<h2>Permisos en cargados:</h2>";
-                            echo "<ul class='list-group'>";
-                            foreach ($archivos as $archivo) {
-                                if ($archivo != "." && $archivo != "..") {
-                                    echo "<li class='list-group-item'><a href='$directorio$archivo' download>$archivo</a></li>";
+                                    foreach ($archivos as $archivo) {
+                                        if ($archivo != "." && $archivo != "..") {
+                                            echo " <tr>
+                                            <td> <a href='$directorio$archivo' download>$archivo</a></td>
+                                            </tr>";
+                                        }
+                                    }
                                 }
-                            }
-                            echo "</ul>";
-                            echo "</div>";
-                        }
+                                ?>
 
-                        ?>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
