@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-02-2024 a las 02:04:50
+-- Tiempo de generación: 14-02-2024 a las 10:58:28
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.4.13
 
@@ -31,9 +31,10 @@ CREATE TABLE `barco` (
   `id` int(11) NOT NULL,
   `id_persona` int(11) NOT NULL,
   `nombre_barco` varchar(255) NOT NULL,
-  `eslora` decimal(10,0) NOT NULL,
-  `manga` decimal(10,0) NOT NULL,
-  `puntal` decimal(10,0) NOT NULL,
+  `matricula` varchar(50) NOT NULL,
+  `eslora` decimal(5,2) NOT NULL,
+  `manga` decimal(5,2) NOT NULL,
+  `puntal` decimal(5,2) NOT NULL,
   `comppa` varchar(250) NOT NULL,
   `uab` varchar(10) NOT NULL,
   `especies` varchar(250) NOT NULL,
@@ -50,14 +51,11 @@ CREATE TABLE `permiso` (
   `id` int(11) NOT NULL,
   `id_persona` int(11) NOT NULL,
   `id_barco` int(11) NOT NULL,
+  `ordinal` varchar(5) NOT NULL,
   `solicitante` varchar(250) NOT NULL,
   `ci` int(11) NOT NULL,
-  `estado` int(50) NOT NULL,
-  `inspectoria` int(50) NOT NULL,
-  `arte_pesca` varchar(250) NOT NULL,
-  `especies` varchar(250) NOT NULL,
-  `usuario_creador` varchar(250) NOT NULL,
-  `state` tinyint(4) NOT NULL
+  `estado` varchar(50) NOT NULL,
+  `inspectoria` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -107,7 +105,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `perfil`, `foto`, `estado`, `ultimo_login`, `fecha`) VALUES
-(1, 'Administrador', 'admin', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'assets/images/avatar/avatar-s-1.png', 1, '2024-02-13 19:54:16', '2024-02-14 00:54:16');
+(1, 'Administrador', 'admin', '$2a$07$asxx54ahjppf45sd87a5auXBm1Vr2M1NV5t/zNQtGHGpS5fFirrbG', 'Administrador', 'assets/images/avatar/avatar-s-1.png', 1, '2024-02-14 04:02:05', '2024-02-14 09:02:05');
 
 --
 -- Índices para tablas volcadas
@@ -145,25 +143,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `barco`
 --
 ALTER TABLE `barco`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `permiso`
 --
 ALTER TABLE `permiso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
