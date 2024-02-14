@@ -76,8 +76,9 @@ session_start();
                 $_GET["ruta"] == "usuarios" ||
                 $_GET["ruta"] == "personas" ||
                 $_GET["ruta"] == "barcos" ||
-                $_GET["ruta"] == "permisos" ||
+                $_GET["ruta"] == "permiso" ||
                 $_GET["ruta"] == "crear-permisos" ||
+                $_GET["ruta"] == "ver-permisos" ||
                 $_GET["ruta"] == "salir"
             ) {
 

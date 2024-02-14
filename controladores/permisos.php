@@ -1,87 +1,79 @@
 <?php
 
 
-    class ControladorPermisos {
+class ControladorPermisos
+{
 
-        static public function ctrMostrarPermisos($item, $valor){
+    static public function ctrMostrarPermisos($item, $valor)
+    {
 
-            $tabla = "permiso";
+        $tabla = "permiso";
 
-            
-            $respuesta = ModeloPermisos::mdlMostrarPermiso($tabla, $item, $valor);
-    
-            return $respuesta;
-        }
 
-        static public function ctrMostrarPersonaSolicitante($item, $valor){
+        $respuesta = ModeloPermisos::mdlMostrarPermiso($tabla, $item, $valor);
 
-            $tabla = "persona";
+        return $respuesta;
+    }
 
-            
-            $respuesta = ModeloPersona::mdlMostrarPersona($tabla, $item, $valor);
-    
-            return $respuesta;
-        }
+    static public function ctrMostrarPersonaSolicitante($item, $valor)
+    {
 
-        /*=============================================
+        $tabla = "persona";
+
+
+        $respuesta = ModeloPersona::mdlMostrarPersona($tabla, $item, $valor);
+
+        return $respuesta;
+    }
+
+    /*=============================================
 	    CREAR PERSONA
 	    =============================================*/
 
-	    static public function ctrCrearPermiso(){
-
-            var_dump($_POST).die;
-
-            if(isset($_POST["nuevoCedula"])){
-
-            if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoPrimerNombre"]) && 
-                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoSegundoNombre"]) &&
-                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoPrimerApellido"]) &&
-                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoSegundoApellido"]) &&
-                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoEstado"]) &&
-                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoMunicipio"]) &&
-                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["nuevoParroquia"])) {
-
-                    $tabla = "permiso";
-
-                    $datos = array("id_persona" =>$_POST["nuevoSolicitante"],
-                                   "solicitante" => $_POST["soli"],
-                                   "ci" =>$_POST["Cedula"],
-                                   "nombre_barco" =>$_POST["nuevoNombreBarco"],
-                                   "estado" =>$_POST["nuevoEstado"],
-                                   "inspectoria" =>$_POST["nuevoInspectoria"],
-                                   "eslora" =>$_POST["nuevoEslora"],
-                                   "arte_pesca" =>$_POST["nuevoArtePesca"] ,
-                                   "manga" =>$_POST["nuevoManga"],
-                                   "matricula" =>$_POST["nuevoMatricula"],
-                                   "conppa" =>$_POST["nuevoCONNPA"],
-                                   "especies" =>$_POST["nuevoEspecies"],
-                                   "puntal" =>$_POST["nuevoPuntal"],
-                                   "uab" =>$_POST["nuevoUAB"],
-                                   "usuario_creador"=>$_SESSION["usuario"],
-                                   "state" =>$_POST["nuevoStatus"]);
+    static public function ctrCrearPermiso()
+    {
 
 
-                    $respuesta = ModeloPermisos::mdlIngresarPermiso($tabla, $datos);
+        if (isset($_POST["nuevoSolicitante"])) {
 
-                    if ($respuesta == "ok") {
-                        echo'<script>
+            $tabla = "permiso";
+            $tblp = "persona";
+            $item = "id";
+
+            $persona = ModeloPersona::mdlMostrarPersona($tblp, $item, $_POST["nuevoSolicitante"]);
+
+            $datos = array(
+                "id_persona" => $_POST["nuevoSolicitante"],
+                "id_barco" => $_POST["nuevoBarco"],
+                "ordinal" => $_POST["nuevoOrdinal"],
+                "solicitante" => $persona["primer_nombre"] . " " . $persona["primer_apellido"],
+                "ci"  => $persona["ci"],
+                "estado" => $persona["estado"],
+                "inspectoria" => $_POST["nuevoInspectoria"]
+            );
+
+
+            $respuesta = ModeloPermisos::mdlIngresarPermiso($tabla, $datos);
+
+            if ($respuesta == "ok") {
+                echo '<script>
                         
                             swal({
                                     type: "success",
-                                    title: "La persona fue registrada correctamente",
+                                    title: "El permiso fue solicitado correctamente",
                                     showConfirmButton: true,
                                     confirmButtonText: "Cerrar"
                                     }).then(function(result){
                                             if (result.value) {
                         
-                                            window.location = "personas";
+                                            window.location = "permiso";
                         
                                             }
                                         })
                         
                             </script>';
-                    }else {
-                        echo'<script>
+            } else {
+                echo '<script>
                     
                         swal({
                                 type: "error",
@@ -91,43 +83,140 @@
                                 }).then(function(result){
                                 if (result.value) {
                     
-                                window.location = "personas";
+                                window.location = "permiso";
                     
                                 }
                             })
                     
-                        </script>';	
-                    }
-
-                
-            }else{
-
-				echo'<script>
-
-					swal({
-						  type: "error",
-						  title: "¡No puede dejar campos vacíos o escribir llevar caracteres especiales!",
-						  showConfirmButton: true,
-						  confirmButtonText: "Cerrar"
-						  }).then(function(result){
-							if (result.value) {
-
-							window.location = "personas";
-
-							}
-						})
-
-			  	</script>';
-			}
-            
-
-				
-		    }
-		
-
-	    }
-
-
+                        </script>';
+            }
+        }
     }
 
-?>
+    static public function ctrGuardarPdf()
+    {
+        if (isset($_FILES["nuevaRuta"]["tmp_name"])) {
+
+            $directorio = "permisos/";
+
+            if (!file_exists($directorio)) {
+                mkdir($directorio, 0755, true);
+            }
+    
+
+            $archivo = $_FILES["nuevaRuta"]["tmp_name"];
+
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            $tipo_mime = finfo_file($finfo, $archivo);
+
+            if ($tipo_mime == 'application/pdf') {
+
+                $nombre_archivo = $_FILES["nuevaRuta"]["name"];
+                $ruta_archivo = $directorio . $nombre_archivo;
+        
+
+                if (move_uploaded_file($archivo, $ruta_archivo)) {
+                    echo '<script>
+
+					swal({
+
+						type: "success",
+						title: "¡El archivo ha sido guardado correctamente!",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar"
+
+					}).then(function(result){
+
+						if(result.value){
+						
+							window.location = "permiso";
+
+						}
+
+					});
+				
+
+					</script>';
+                } else {
+                    echo '<script>
+
+					swal({
+
+						type: "error",
+						title: "¡El archivo no ha sido guardado!",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar"
+
+					}).then(function(result){
+
+						if(result.value){
+						
+							window.location = "permiso";
+
+						}
+
+					});
+				
+
+				</script>';
+                }
+            } else {
+                echo '<script>
+
+					swal({
+
+						type: "error",
+						title: "¡El archivo debe ser un pdf!",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar"
+
+					}).then(function(result){
+
+						if(result.value){
+						
+							window.location = "permiso";
+
+						}
+
+					});
+				
+
+				</script>';
+            }
+        }
+    }
+
+    static public function ctrBorrar()
+    {
+
+        if (isset($_GET["permiso"])) {
+
+            $tabla = "permiso";
+            $datos = $_GET["permiso"];
+
+            $respuesta = ModeloPermisos::mdlBorrar($tabla, $datos);
+
+            if ($respuesta == "ok") {
+
+                echo '<script>
+
+				swal({
+					  type: "success",
+					  title: "ha sido borrado correctamente",
+					  showConfirmButton: true,
+					  confirmButtonText: "Cerrar",
+					  closeOnConfirm: false
+					  }).then(function(result) {
+								if (result.value) {
+
+								window.location = "permiso";
+
+								}
+							})
+
+				</script>';
+            }
+        }
+    }
+}
+

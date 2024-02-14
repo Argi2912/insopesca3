@@ -51,9 +51,9 @@
                             echo ' <tr>
                                        <td>' . ($key + 1) . '</td>
                                        <td>' . $value["nombre_barco"] . '</td>
-                                       <td>' . $value["eslora"] . '</td>
-                                       <td>' . $value["manga"] . '</td>
-                                       <td>' . $value["puntal"] . '</td>';
+                                       <td>' . $value["eslora"] . 'm</td>
+                                       <td>' . $value["manga"] . 'm</td>
+                                       <td>' . $value["puntal"] . 'm</td>';
 
 
                             echo '<td>
@@ -93,7 +93,7 @@ MODAL CREAR REGISTRO
             <form role="form" method="post">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-6">
                             <div class="form-group has-icon-left">
                                 <label for="Dueño">Dueño del Barco</label>
                                 <div class="position-relative">
@@ -130,9 +130,20 @@ MODAL CREAR REGISTRO
                         </div>
                         <div class="col-6">
                             <div class="form-group has-icon-left">
+                                <label for="Matricula">Ingresar Matricula del Barco</label>
+                                <div class="position-relative">
+                                    <input type="text" name="nuevoMatricula" required id="Matricula" class="form-control">
+                                    <div class="form-control-icon">
+                                        <i data-feather="key"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
                                 <label for="Eslora">Ingresar Eslora</label>
                                 <div class="position-relative">
-                                    <input type="number" maxlength="8" name="nuevoEslora" required id="Eslora" class="form-control">
+                                    <input type="number" maxlength="8" step="any" name="nuevoEslora" required id="Eslora" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="user"></i>
                                     </div>
@@ -143,7 +154,7 @@ MODAL CREAR REGISTRO
                             <div class="form-group has-icon-left">
                                 <label for="Manga">Ingresar Manga</label>
                                 <div class="position-relative">
-                                    <input type="number" name="nuevoManga" required id="Manga" class="form-control">
+                                    <input type="number" name="nuevoManga" step="any" required id="Manga" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>
@@ -154,7 +165,7 @@ MODAL CREAR REGISTRO
                             <div class="form-group has-icon-left">
                                 <label for="Puntal">Ingresar Puntal</label>
                                 <div class="position-relative">
-                                    <input type="number" name="nuevoPuntal" required id="Puntal" class="form-control">
+                                    <input type="number" name="nuevoPuntal" step="any" required id="Puntal" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>
@@ -165,7 +176,7 @@ MODAL CREAR REGISTRO
                             <div class="form-group has-icon-left">
                                 <label for="COMPA">Ingresar COMPPA</label>
                                 <div class="position-relative">
-                                    <input type="text" name="nuevoCOMPA" required id="COMPA" class="form-control">
+                                    <input type="text" name="nuevoCOMPA" step="any" required id="COMPA" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>
@@ -240,7 +251,7 @@ MODAL EDITAR REGISTRO
             <form role="form" method="post">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-6">
                             <div class="form-group has-icon-left">
                                 <label for="eDueño">Dueño Barco</label>
                                 <div class="position-relative">
@@ -265,9 +276,20 @@ MODAL EDITAR REGISTRO
                         </div>
                         <div class="col-6">
                             <div class="form-group has-icon-left">
+                                <label for="eMatricula">Ingresar Matricula del Barco</label>
+                                <div class="position-relative">
+                                    <input type="text" name="editarMatricula" required id="eMatricula" class="form-control">
+                                    <div class="form-control-icon">
+                                        <i data-feather="key"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
                                 <label for="eEslora">Ingresar Eslora</label>
                                 <div class="position-relative">
-                                    <input type="number" maxlength="8" name="editarEslora" required id="eEslora" class="form-control">
+                                    <input type="number" maxlength="8" step="any" name="editarEslora" required id="eEslora" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="user"></i>
                                     </div>
@@ -278,7 +300,7 @@ MODAL EDITAR REGISTRO
                             <div class="form-group has-icon-left">
                                 <label for="eManga">Ingresar Manga</label>
                                 <div class="position-relative">
-                                    <input type="number" name="editarManga" required id="eManga" class="form-control">
+                                    <input type="number" name="editarManga" step="any" required id="eManga" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>
@@ -289,7 +311,7 @@ MODAL EDITAR REGISTRO
                             <div class="form-group has-icon-left">
                                 <label for="ePuntal">Ingresar Puntal</label>
                                 <div class="position-relative">
-                                    <input type="number" name="editarPuntal" required id="ePuntal" class="form-control">
+                                    <input type="number" name="editarPuntal" step="any" required id="ePuntal" class="form-control">
                                     <div class="form-control-icon">
                                         <i data-feather="key"></i>
                                     </div>

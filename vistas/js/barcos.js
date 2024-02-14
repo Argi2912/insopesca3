@@ -30,8 +30,10 @@ $(".barcos-tabla").on("click", ".btnEditarBarco", function(){
 			$("#eDueño").val(respuesta["dueño"]);
 
 			$("#eNombreBarco").val(respuesta["barco"]);
+			$("#eMatricula").val(respuesta["matricula"]);
 			$("#eEslora").val(respuesta["eslora"]);
 			$("#eManga").val(respuesta["manga"]);
+			$("#ePuntal").val(respuesta["puntal"]);
 			$("#eCOMPA").val(respuesta["comppa"]);
 			$("#eUAB").val(respuesta["uab"]);
 			$("#eEspecies").val(respuesta["especies"]);
@@ -75,7 +77,6 @@ $(".barcos-tabla").on("click", ".btnEliminarBarco", function(){
   })
 
 })
-
 
 
 

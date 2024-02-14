@@ -22,6 +22,14 @@ class ControladorBarco
         return $respuesta;
     }
 
+    static public function ctrMostrarBarcos($valor)
+    {
+
+        $respuesta = ModeloBarco::mdlMostrarBarcos($valor);
+
+        return $respuesta;
+    }
+
     /*=============================================
 	    CREAR PERSONA
 	    =============================================*/
@@ -38,6 +46,7 @@ class ControladorBarco
                 $datos = array(
                     "id_persona" => $_POST["nuevoDueño"],
                     "nombre_barco" => $_POST["nuevoNombreBarco"],
+                    "matricula" => $_POST["nuevoMatricula"],
                     "eslora" => $_POST["nuevoEslora"],
                     "manga" => $_POST["nuevoManga"],
                     "puntal" => $_POST["nuevoPuntal"],
@@ -118,23 +127,28 @@ class ControladorBarco
 
         if (isset($_POST["eDueño"])) {
 
+            
             if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ .]+$/', $_POST["editarNombreBarco"])) {
-
+                
                 $tabla = "barco";
+                
+                $idPersona = ModeloBarco::mdlMostrarBarcoyPersona($_POST["idBarco"]);
+                $idPersona = $idPersona["idP"];
 
                 $datos = array(
-                    "id_persona" => $_POST["nuevoDueño"],
-                    "nombre_barco" => $_POST["nuevoNombreBarco"],
-                    "eslora" => $_POST["nuevoEslora"],
-                    "manga" => $_POST["nuevoManga"],
-                    "puntal" => $_POST["nuevoPuntal"],
-                    "comppa" => $_POST["nuevoCOMPA"],
-                    "especies" => $_POST["nuevoEspecies"],
-                    "uab" => $_POST["nuevoUAB"],
-                    "arte_pesca" => $_POST["nuevoPesca"],
+                    "id_persona" => $idPersona,
+                    "nombre_barco" => $_POST["editarNombreBarco"],
+                    "matricula" => $_POST["editarMatricula"],
+                    "eslora" => $_POST["editarEslora"],
+                    "manga" => $_POST["editarManga"],
+                    "puntal" => $_POST["editarPuntal"],
+                    "comppa" => $_POST["editarCOMPA"],
+                    "especies" => $_POST["editarEspecies"],
+                    "uab" => $_POST["editarUAB"],
+                    "arte_pesca" => $_POST["editarPesca"],
                     "id" => $_POST["idBarco"]
                 );
-
+                
 
                 $respuesta = ModeloBarco::mdlEditarBarco($tabla, $datos);
 

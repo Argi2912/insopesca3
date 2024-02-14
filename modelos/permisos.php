@@ -45,22 +45,17 @@
 
 		static public function mdlIngresarPermiso($tabla, $datos){
 
-			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nacionalidad, ci, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, sexo, estado_civil, telefono, estado, municipio, parroquia, correo) VALUES (:nacionalidad, :ci, :primer_nombre, :segundo_nombre, :primer_apellido, :segundo_apellido, :fecha_nacimiento, :sexo, :estado_civil, :telefono, :estado, :municipio, :parroquia, :correo)");
+			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_persona,id_barco,ordinal,solicitante,ci,estado,inspectoria) VALUES (:id_persona,:id_barco,:ordinal,:solicitante,:ci,:estado,:inspectoria)");
 			
-			$stmt->bindParam(":nacionalidad", $datos["nacionalidad"], PDO::PARAM_STR);
+
+			$stmt->bindParam(":id_persona", $datos["id_persona"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_barco", $datos["id_barco"], PDO::PARAM_STR);
+			$stmt->bindParam(":ordinal", $datos["ordinal"], PDO::PARAM_STR);
+			$stmt->bindParam(":solicitante", $datos["solicitante"], PDO::PARAM_STR);
 			$stmt->bindParam(":ci", $datos["ci"], PDO::PARAM_INT);
-			$stmt->bindParam(":primer_nombre", $datos["primer_nombre"], PDO::PARAM_STR);
-			$stmt->bindParam(":segundo_nombre", $datos["segundo_nombre"], PDO::PARAM_STR);
-			$stmt->bindParam(":primer_apellido", $datos["primer_apellido"], PDO::PARAM_STR);
-			$stmt->bindParam(":segundo_apellido", $datos["segundo_apellido"], PDO::PARAM_STR);
-			$stmt->bindParam(":fecha_nacimiento", $datos["fecha_nacimiento"], PDO::PARAM_STR);
-			$stmt->bindParam(":sexo", $datos["sexo"], PDO::PARAM_INT);
-			$stmt->bindParam(":estado_civil", $datos["estado_civil"], PDO::PARAM_INT);
-			$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_INT);
 			$stmt->bindParam(":estado", $datos["estado"], PDO::PARAM_STR);
-			$stmt->bindParam(":municipio", $datos["municipio"], PDO::PARAM_STR);
-			$stmt->bindParam(":parroquia", $datos["parroquia"], PDO::PARAM_STR);
-			$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+			$stmt->bindParam(":inspectoria", $datos["inspectoria"], PDO::PARAM_STR);
+			
 
 			if($stmt->execute()){
 
@@ -123,7 +118,7 @@
 		BORRAR USUARIO
 		=============================================*/
 
-	static public function mdlBorrarPersona($tabla, $datos){
+	static public function mdlBorrar($tabla, $datos){
 
 		
 

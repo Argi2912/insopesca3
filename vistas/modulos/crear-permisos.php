@@ -51,154 +51,41 @@
                             </div>
                             <div class="col-md-6 col-12">
                                 <div class="form-group has-icon-left">
-                                    <label for="Cedula">Cedula</label>
+                                    <label for="VBarco">Barco</label>
                                     <div class="position-relative">
-                                        <input type="number" maxlength="8" name="Cedula" readonly required id="Cedula" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="user"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="NombreBarco">Nombre del Barco</label>
-                                    <div class="position-relative">
-                                        <input type="text" name="nuevoNombreBarco" required id="NombreBarco" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="Estado">Estado</label>
-                                    <div class="position-relative">
-                                        <input type="text" name="nuevoEstado" readonly required id="Estado" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="Inspectoria">Inspectoria</label>
-                                    <div class="position-relative">
-                                        <input type="text" name="nuevoInspectoria" required id="Inspectoria" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="Eslora">Eslora</label>
-                                    <div class="position-relative">
-                                        <input type="number" name="nuevoEslora" required id="Eslora" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="ArtePesca">Arte de Pesca</label>
-                                    <div class="position-relative">
-                                        <input type="text" name="nuevoArtePesca" required id="ArtePesca" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="Manga">Manga</label>
-                                    <div class="position-relative">
-                                        <input type="number" name="nuevoManga" required id="Manga" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="Matricula">Matricula</label>
-                                    <div class="position-relative">
-                                        <input type="text" name="nuevoMatricula" required id="Matricula" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="CONNPA">CONNPA</label>
-                                    <div class="position-relative">
-                                        <input type="text" name="nuevoCONNPA" id="CONNPA" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <label for="Especies">Especies</label>
-                                <select class="choices form-select multiple-remove" name="nuevoPuntal" id="Puntal" multiple="multiple">
-                                    <optgroup>
-                                        <option value="romboid">Romboid</option>
-                                        <option value="trapeze">Trapeze</option>
-                                        <option value="triangle">Triangle</option>
-                                        <option value="polygon">Polygon</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="Puntal">Puntal</label>
-                                    <div class="position-relative">
-                                        <input type="number" name="nuevoPuntal" required id="Puntal" class="form-control">
-                                        <div class="form-control-icon">
-                                            <i data-feather="key"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group has-icon-left">
-                                    <label for="UAB">UAB</label>
-                                    <div class="position-relative">
-                                        <select name="nuevoUAB" id="UAB" required class="form-select">
+                                        <select name="nuevoBarco" id="VBarco" required class="form-select">
                                             <option>Elegir...</option>
-                                            <option value="-10">-10m</option>
-                                            <option value="-5">-5m</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-12">
                                 <div class="form-group has-icon-left">
-                                    <label for="Status">Status</label>
+                                    <label for="VOrdinal">Ordinal</label>
                                     <div class="position-relative">
-                                        <select name="nuevoStatus" id="Status" required class="form-select">
+                                        <select name="nuevoOrdinal" id="VOrdinal" required class="form-select">
                                             <option>Elegir...</option>
-                                            <option value="1">Activo</option>
-                                            <option value="2">Inactivo</option>
+                                            <option value="01">01</option>
+                                            <option value="11">11</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary mr-1 mb-1">Guardar</button>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group has-icon-left">
+                                    <label for="VInspectoria">Inspectoria</label>
+                                    <div class="position-relative">
+                                        <input type="text" name="nuevoInspectoria" id="VInspectoria" required class="form-select">
+                                    </div>
+                                </div>
                             </div>
+                            <button type="submit" class="btn btn-primary mr-1 mb-1">Guardar</button>
                         </div>
 
+                        <?php
+                        $crearPermiso = new ControladorPermisos();
+                        $crearPermiso->ctrCrearPermiso();
+                        ?>
                     </form>
                 </div>
             </div>

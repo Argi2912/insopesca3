@@ -36,22 +36,27 @@
                             </a>
                         
                         </li>
-                        <!-- <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
+                        <li class="sidebar-item  ">
+                            <a href="permiso" class="sidebar-link">
                                 <i data-feather="file-text" width="20"></i> 
                                 <span>Permisos</span>
                             </a>
-                            <ul class="submenu ">
-                                <li>
-                                    <a href="permisos">Solicitudes de Permisos</a>
-                                </li>
-                                <li>
-                                    <a href="crear-permisos">Solicitar Permisos</a>
-                                </li>
-                            </ul>
-                        </li> -->
-
-                     
+                        
+                        </li>
+                        <li class="sidebar-item  ">
+                            <a href="crear-permisos" class="sidebar-link">
+                                <i data-feather="file-text" width="20"></i> 
+                                <span>Solicitar Permisos</span>
+                            </a>
+                        
+                        </li>    
+                        <li class="sidebar-item  ">
+                            <a href="ver-permisos" class="sidebar-link">
+                                <i data-feather="file-text" width="20"></i> 
+                                <span>Ver Permisos</span>
+                            </a>
+                        
+                        </li>                 
                         
                     </ul>
                 </div>
