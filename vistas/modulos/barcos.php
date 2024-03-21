@@ -122,7 +122,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoNombreBarco" pattern="[A-Za-z\s]{1,30}" required id="NombreBarco" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="file-text"></i>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoMatricula" pattern="[A-Za-z0-9/-]{1,20}" required id="Matricula" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="clipboar"></i>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9/.]{1,6}" name="nuevoEslora" required id="Eslora" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="user"></i>
+                                        <i data-feather="anchor"></i>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9/.]{1,6}" name="nuevoManga" required id="Manga" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="anchor"></i>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9/.]{1,6}" name="nuevoPuntal" required id="Puntal" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="anchor"></i>
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoCOMPA" pattern="[A-Za-z\s]{1,20}" required id="COMPA" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="pocket"></i>
                                     </div>
                                 </div>
                             </div>
@@ -196,6 +196,9 @@ MODAL CREAR REGISTRO
                         <div class="col-md-6 col-12">
                             <label for="Especies">Especies</label>
                             <input type="text" name="nuevoEspecies" pattern="[A-Za-z\s,-.]{1,100}" required id="Especies" class="form-control">
+                            <div class="form-control-icon">
+                                <i data-feather="package"></i>
+                            </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="form-group has-icon-left">
@@ -265,7 +268,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarNombreBarco" pattern="[A-Za-z\s]{1,30}" required id="eNombreBarco" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="file-text"></i>
                                     </div>
                                 </div>
                             </div>
@@ -276,7 +279,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[A-Za-z0-9/-]{1,20}" name="editarMatricula" required id="eMatricula" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="clipboard"></i>
                                     </div>
                                 </div>
                             </div>
@@ -287,7 +290,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input  type="text" pattern="[0-9/.]{1,6}" name="editarEslora" required id="eEslora" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="user"></i>
+                                        <i data-feather="anchor"></i>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +301,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9/.]{1,6}" name="editarManga"  required id="eManga" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="anchor"></i>
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +312,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9/.]{1,6}" name="editarPuntal" required id="ePuntal" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="anchor"></i>
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +323,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarCOMPA" pattern="[A-Za-z\s]{1,20}" required id="eCOMPA" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="pocket"></i>
                                     </div>
                                 </div>
                             </div>
@@ -339,6 +342,9 @@ MODAL EDITAR REGISTRO
                         <div class="col-md-6 col-12">
                             <label for="eEspecies">Especies</label>
                             <input type="text" name="editarEspecies" pattern="[A-Za-z\s,-.]{1,100}" required id="eEspecies" class="form-control">
+                            <div class="form-control-icon">
+                                        <i data-feather="package"></i>
+                                    </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="form-group has-icon-left">

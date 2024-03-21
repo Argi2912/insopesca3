@@ -29,14 +29,14 @@
                     </li>
                     <li class="sidebar-item  ">
                         <a href="personas" class="sidebar-link">
-                            <i data-feather="user" width="20"></i>
+                            <i data-feather="users" width="20"></i>
                             <span>Personas</span>
                         </a>
 
                     </li>
                     <li class="sidebar-item  ">
                         <a href="barcos" class="sidebar-link">
-                            <i data-feather="user" width="20"></i>
+                            <i data-feather="anchor" width="20"></i>
                             <span>Barcos</span>
                         </a>
 

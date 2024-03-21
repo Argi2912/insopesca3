@@ -116,7 +116,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9]{6,8}" name="nuevoCedula" required id="Cedula" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="user"></i>
+                                        <i data-feather="file-text"></i>
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoPrimerNombre" pattern="[A-Za-z]{1,20}" required id="PrimerNombre" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoSegundoNombre" pattern="[A-Za-z]{1,20}" required id="SegundoNombre" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoPrimerApellido" pattern="[A-Za-z]{1,20}" required id="PrimerApellido" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoSegundoApellido" pattern="[A-Za-z]{1,20}" required id="SegundoApellido" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9]{11,13}" name="nuevoTelefono" required id="Telefono" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="user"></i>
+                                        <i data-feather="phone"></i>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +212,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoEstado" pattern="[A-Za-z\s]{1,20}" required id="Estado" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="map"></i>
                                     </div>
                                 </div>
                             </div>
@@ -223,7 +223,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoMunicipio" pattern="[A-Za-z\s]{1,20}" required id="Municipio" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="map-pin"></i>
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="nuevoParroquia" pattern="[A-Za-z\s]{1,20}" required id="Parroquia" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="map-pin"></i>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ MODAL CREAR REGISTRO
                                 <div class="position-relative">
                                     <input type="email" name="nuevoCorreo" required id="Correo" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="mail"></i>
                                     </div>
                                 </div>
                             </div>
@@ -307,7 +307,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9]{6,8}" name="editarCedula" required id="eCedula" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="user"></i>
+                                        <i data-feather="file-text"></i>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +318,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarPrimerNombre" pattern="[A-Za-z]{1,20}" required id="ePrimerNombre" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -329,7 +329,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarSegundoNombre" pattern="[A-Za-z]{1,20}" required id="eSegundoNombre" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -340,7 +340,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarPrimerApellido" pattern="[A-Za-z]{1,20}" required id="ePrimerApellido" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -351,7 +351,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarSegundoApellido" pattern="[A-Za-z]{1,20}" required id="eSegundoApellido" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -392,7 +392,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" pattern="[0-9]{11,13}" name="editarTelefono" required id="eTelefono" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="user"></i>
+                                        <i data-feather="phone"></i>
                                     </div>
                                 </div>
                             </div>
@@ -403,7 +403,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarEstado" pattern="[A-Za-z\s]{1,20}" required id="eEstado" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="map"></i>
                                     </div>
                                 </div>
                             </div>
@@ -414,7 +414,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarMunicipio" pattern="[A-Za-z\s]{1,20}" required id="eMunicipio" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="map-pin"></i>
                                     </div>
                                 </div>
                             </div>
@@ -425,7 +425,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="text" name="editarParroquia" pattern="[A-Za-z\s]{1,20}" required id="eParroquia" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="map-pin"></i>
                                     </div>
                                 </div>
                             </div>
@@ -436,7 +436,7 @@ MODAL EDITAR REGISTRO
                                 <div class="position-relative">
                                     <input type="email" name="editarCorreo" required id="eCorreo" class="form-control">
                                     <div class="form-control-icon">
-                                        <i data-feather="key"></i>
+                                        <i data-feather="mail"></i>
                                     </div>
                                 </div>
                             </div>
